@@ -16,6 +16,8 @@ public class Attractor : MonoBehaviour
                 Attract(attractor);
 
         }
+
+        //garvity  betweet object
         
     }
     // Start is called before the first frame update
