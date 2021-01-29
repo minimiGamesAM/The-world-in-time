@@ -20,7 +20,7 @@ MonoBehaviour:
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
       m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 0.10452961, y: 0.10452968}
+      m_UniformScale: {x: 0.0038584732, y: 0.0038585402}
       m_UniformBool: 1
       m_XRotationBool: 0
       m_YRotationBool: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
       m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 0.06711413, y: 0.26174498}
+      m_UniformScale: {x: 0.36912757, y: 0.49664435}
       m_UniformBool: 1
       m_XRotationBool: 0
       m_YRotationBool: 0
@@ -144,3 +144,19 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 0
     name: Tree1(Polybrush Clone)
+  - gameObject: {fileID: 100000, guid: d209be13548e70947bc39053977ce977, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 1
+      m_XRotationBool: 0
+      m_YRotationBool: 0
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: Rock1A
