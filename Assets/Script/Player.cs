@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
         float verticalMovement = Input.GetAxis("Vertical");
         float horizontalMovement = Input.GetAxis("Horizontal");
 
-        _moveVelocityDir = Vector3.forward * verticalMovement + Vector3.right * horizontalMovement;
+        _moveVelocityDir = Vector3.forward * verticalMovement + Vector3.left * horizontalMovement;
     }
 
     void FixedUpdate()
