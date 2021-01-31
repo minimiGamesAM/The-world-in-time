@@ -6,8 +6,7 @@ public class Attracted : MonoBehaviour
 {
     private Rigidbody _rb;
     private Rigidbody _atractorRb;
-    public GameObject _atractorGameObject;
-
+   
     public static float G = 0.00000667f;
 
     void FixedUpdate()
@@ -30,7 +29,8 @@ public class Attracted : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
-        _atractorRb = _atractorGameObject.GetComponent<Rigidbody>();
+        GameObject[] earthObj = GameObject.FindGameObjectsWithTag("earth");
+        _atractorRb = earthObj[0].GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
