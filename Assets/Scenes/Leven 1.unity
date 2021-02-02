@@ -9519,16 +9519,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118586745}
   m_LocalRotation: {x: 0.07228206, y: 0.09642935, z: 0.028584197, w: 0.9923002}
-  m_LocalPosition: {x: -5.31, y: 17.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.25572217, y: -0.34867764, z: -0.27097234}
+  m_LocalScale: {x: 0.039848868, y: 0.03984887, z: 0.03984887}
   m_Children:
   - {fileID: 665950737}
   - {fileID: 758506381}
   - {fileID: 1399805163}
   - {fileID: 108344317}
   - {fileID: 1058824240}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 2111943291}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 7.9290004, y: 11.385, z: 4.092}
 --- !u!1001 &1125836828
 PrefabInstance:
@@ -14233,7 +14233,7 @@ GameObject:
   - component: {fileID: 2111943288}
   - component: {fileID: 2111943294}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Planeta
   m_TagString: earth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14316,6 +14316,7 @@ Transform:
   - {fileID: 1525773284}
   - {fileID: 552331463}
   - {fileID: 1091523086}
+  - {fileID: 1118586746}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18126,6 +18127,7 @@ MonoBehaviour:
   _playerSpeed: 10
   _fireSpeed: 10
   _fireAngle: 45
+  _orientationSensitivity: 100
   _myPrefab: {fileID: 1849413873447572747, guid: 4e0b95ec870ed9941aa0663aa59c91b5,
     type: 3}
 --- !u!1 &2135105957
