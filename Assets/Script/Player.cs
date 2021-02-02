@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 
     public float _fireSpeed = 10;
     public float _fireAngle = 45;
+    public float _orientationSensitivity = 100;
 
     public GameObject _myPrefab;
 
@@ -33,6 +34,8 @@ public class Player : MonoBehaviour
 
         _moveVelocityDir = Vector3.forward * verticalMovement + Vector3.left * horizontalMovement;
 
+        transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * Time.deltaTime * _orientationSensitivity);
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             fireObject();
