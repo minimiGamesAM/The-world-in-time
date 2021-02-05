@@ -18725,10 +18725,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _atractorGameObject: {fileID: 2111943287}
-  _playerSpeed: 10
+  _playerSpeed: 5
   _fireSpeed: 10
   _fireAngle: 45
-  _orientationSensitivity: 100
+  _orientationSensitivity: 40
   _myPrefab: {fileID: 1849413873447572747, guid: 4e0b95ec870ed9941aa0663aa59c91b5,
     type: 3}
 --- !u!1 &2135105957
