@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
 
     public float _fireSpeed = 10;
     public float _fireAngle = 45;
-    public float _orientationSensitivity = 100;
+    public float _orientationSensitivity = 40;
 
     public GameObject _myPrefab;
 
@@ -53,6 +53,6 @@ public class Player : MonoBehaviour
 
         Rigidbody rb = _myPrefab.GetComponent<Rigidbody>();
 
-        rb.velocity = Quaternion.Euler(0, -30, 0) * (transform.forward * _fireSpeed);
+        rb.velocity = transform.TransformDirection(Quaternion.Euler(_fireAngle, 0, 0) * Vector3.forward) * _fireSpeed;
     }
 }
