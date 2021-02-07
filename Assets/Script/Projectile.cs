@@ -29,13 +29,11 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+
         if(collision.gameObject.name != "Player")
         {
-            if (_timeLife < 0)
-            {
-                _timeLife = 0;
-                _timeLife += Time.deltaTime;
-            }
+            _timeLife = 0;
+            _timeLife += Time.deltaTime;
         }
     }
 }
