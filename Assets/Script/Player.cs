@@ -49,9 +49,9 @@ public class Player : MonoBehaviour
 
     private void fireObject()
     {
-        _myPrefab = Instantiate(_myPrefab, transform.position - transform.TransformDirection(Vector3.up), Quaternion.identity);
+        GameObject clonedPrefab = Instantiate(_myPrefab, transform.position - transform.TransformDirection(Vector3.up), Quaternion.identity);
 
-        Rigidbody rb = _myPrefab.GetComponent<Rigidbody>();
+        Rigidbody rb = clonedPrefab.GetComponent<Rigidbody>();
 
         rb.velocity = transform.TransformDirection(Quaternion.Euler(_fireAngle, 0, 0) * Vector3.forward) * _fireSpeed;
     }
