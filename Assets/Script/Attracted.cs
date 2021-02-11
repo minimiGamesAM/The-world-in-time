@@ -5,8 +5,8 @@ using UnityEngine;
 public class Attracted : MonoBehaviour
 {
     private Rigidbody _rb;
-    private List<Rigidbody> _atractorsRb;
-   
+    public List<Rigidbody> _atractorsRb;
+        
     public static float G = 0.00000667f;
 
     void FixedUpdate()
