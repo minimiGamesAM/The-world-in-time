@@ -10,6 +10,9 @@ public class Projectile : MonoBehaviour
     private Vector3 _currentPoint;
     private Attracted _scriptAttracted;
     private Vector3 _minClosestAttractorDir;
+    private Rigidbody _rigid;
+
+    private bool _break = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +20,7 @@ public class Projectile : MonoBehaviour
         _currentPoint = transform.position;
         _scriptAttracted = GetComponent<Attracted>();
         _minClosestAttractorDir = new Vector3();
+        _rigid = GetComponent<Rigidbody>();
     }
 
     void getClosestAttractorPos()
@@ -52,6 +56,11 @@ public class Projectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if(Input.GetKeyDown(KeyCode.B))
+        {
+            _break = true;
+        }
     }
 
     void FixedUpdate()
@@ -61,6 +70,14 @@ public class Projectile : MonoBehaviour
         Debug.DrawLine(_currentPoint, transform.position, color, 30);
 
         _currentPoint = transform.position;
+
+        if(_break)
+        {
+            Vector3 dirMovement = _rigid.velocity.normalized;
+            _rigid.AddForce(-dirMovement * 100);
+            //print("break " + name);
+            _break = false;
+        }
     }
 
     void OnCollisionEnter(Collision collision)
