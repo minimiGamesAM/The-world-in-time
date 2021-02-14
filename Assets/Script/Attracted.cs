@@ -5,32 +5,42 @@ using UnityEngine;
 public class Attracted : MonoBehaviour
 {
     private Rigidbody _rb;
-    private Rigidbody _atractorRb;
-   
+    public List<Rigidbody> _atractorsRb;
+        
     public static float G = 0.00000667f;
 
     void FixedUpdate()
     {
 
-        Attract(_atractorRb);
+        Attract();
 
     }
 
-    void Attract(Rigidbody rbAttractor)
+    void Attract()
     {
-        Vector3 direction = _rb.position - rbAttractor.position;
-        float distance = direction.magnitude;
-        float forceMagnitud = G * _rb.mass * rbAttractor.mass / Mathf.Pow(distance, 2);
-        Vector3 force = -direction.normalized * forceMagnitud;
-        _rb.AddForce(force);
+        foreach(Rigidbody rbAttractor in _atractorsRb)
+        {
+            Vector3 direction = _rb.position - rbAttractor.position;
+            float distance = direction.magnitude;
+            float forceMagnitud = G * _rb.mass * rbAttractor.mass / Mathf.Pow(distance, 2);
+            Vector3 force = -direction.normalized * forceMagnitud;
+            _rb.AddForce(force);
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
+
         _rb = GetComponent<Rigidbody>();
+        _atractorsRb = new List<Rigidbody>();
+
         GameObject[] earthObj = GameObject.FindGameObjectsWithTag("earth");
-        _atractorRb = earthObj[0].GetComponent<Rigidbody>();
+
+        foreach(GameObject gObject in earthObj)
+        {
+            _atractorsRb.Add(gObject.GetComponent<Rigidbody>());
+        }
     }
 
     // Update is called once per frame
